@@ -24,10 +24,9 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install System FFmpeg & Audio Codecs
+      - name: Verify FFmpeg
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg libasound2 libatk-bridge2.0-0 libgtk-3-0
+          ffmpeg -version
 
       - name: Setup Python
         uses: actions/setup-python@v5
