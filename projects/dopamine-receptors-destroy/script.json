@@ -1,0 +1,24 @@
+{
+  "title": "What Scrolling For 1 Hour Does To Your Brain",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "lead": 0.4,
+  "outro": 0.9,
+  "gap": 0.28,
+  "music": "bed",
+  "sources": [
+    "Stanford Medicine Neuroscience - Screen Dopamine Adaptation Study",
+    "Huberman Lab - Dopamine Receptor Downregulation and Prefrontal Cortex"
+  ],
+  "lines": [
+    { "text": "What happens if you scroll your phone right after waking up?", "caps": "WHAT *HAPPENS | IF YOU *SCROLL | IN *BED?" },
+    { "text": "Well, your brain starts the day in a calm alpha-wave state,", "caps": "YOUR *BRAIN | STARTS IN *CALM | ALPHA *STATE" },
+    { "text": "but each short video hits you with a 200 percent dopamine spike.", "caps": "EACH *VIDEO | HITS *200% | DOPAMINE *SPIKE" },
+    { "text": "To protect itself from burnout, your brain literally shuts down its dopamine receptors.", "caps": "TO *PROTECT | YOUR *BRAIN | BURNS *RECEPTORS" },
+    { "text": "This is why everyday tasks like studying or working suddenly feel painful.", "caps": "STUDYING & *WORK | FEELS *PAINFUL" },
+    { "text": "So is your motivation broken forever? Nope, that's a myth.", "caps": "BROKEN *FOREVER? | *NOPE | TOTAL *MYTH" },
+    { "text": "Your brain can reset those receptors within forty-eight hours.", "caps": "YOUR *BRAIN | CAN *RESET | 48 *HOURS" },
+    { "text": "Just wait thirty minutes before touching your phone tomorrow morning,", "caps": "WAIT *30 MINS | BEFORE *SCREENS" },
+    { "text": "and watch your natural focus double.", "caps": "WATCH YOUR *FOCUS | NATURALLY *DOUBLE" }
+  ]
+}

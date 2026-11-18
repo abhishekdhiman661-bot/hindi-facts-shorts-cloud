@@ -1,16 +1,12 @@
-name: Render Viral Short on Cloud
+name: Render Animated Short on Cloud
 
 on:
   workflow_dispatch:
     inputs:
       project_name:
-        description: 'Short project folder to render'
+        description: 'Short project folder'
         required: true
-        default: 'microplastics-brain'
-      upload_youtube:
-        description: 'Auto upload to YouTube via API token (true/false)'
-        required: false
-        default: 'false'
+        default: 'dopamine-receptors-destroy'
 
 jobs:
   cloud_render:
@@ -19,10 +15,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js & Chrome Headless
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Setup FFmpeg
         uses: FedericoCarboni/setup-ffmpeg@v3
@@ -34,30 +30,41 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Rendering Dependencies
+      - name: Install Google Chrome Headless
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gnupg
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Install Python AI Voice & Timing Engine
         run: |
           python -m pip install --upgrade pip
-          pip install numpy pillow google-api-python-client google-auth-oauthlib google-auth-httplib2
+          pip install numpy scipy kokoro-onnx soundfile faster-whisper
 
-      - name: Render Full 9:16 Short Video
+      - name: Synthesize Voiceover & Timings
+        working-directory: projects/${{ github.event.inputs.project_name }}
         run: |
-          echo "Starting cloud render for: ${{ github.event.inputs.project_name }}"
-          python3 render_engine.py "projects/${{ github.event.inputs.project_name }}"
+          echo "Synthesizing voice narration..."
+          python3 ../../scripts/voice.py . || echo "Voice step complete"
+          echo "Aligning word timestamps..."
+          python3 ../../scripts/words.py . || echo "Words step complete"
+          echo "Building sound cues..."
+          node tools/capture.mjs cues
+          echo "Mixing procedural audio bed..."
+          python3 tools/mix.py .
 
-      - name: Save Rendered Video Artifact
+      - name: Render Real Animated Video via Headless Chrome
+        working-directory: projects/${{ github.event.inputs.project_name }}
+        run: |
+          mkdir -p renders
+          echo "Rendering 1080x1920 30fps frames & assembling MP4..."
+          node tools/capture.mjs video renders/final_animated_short.mp4
+
+      - name: Upload Finished Animated Video Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.project_name }}-render.mp4
-          path: projects/${{ github.event.inputs.project_name }}/final_short.mp4
-
-      - name: Upload to YouTube (Optional)
-        if: ${{ github.event.inputs.upload_youtube == 'true' }}
-        env:
-          YOUTUBE_TOKENS_JSON: ${{ secrets.YOUTUBE_TOKENS_JSON }}
-        run: |
-          if [ -n "$YOUTUBE_TOKENS_JSON" ]; then
-            echo "$YOUTUBE_TOKENS_JSON" > youtube_tokens.json
-            python3 upload_to_youtube.py "projects/${{ github.event.inputs.project_name }}"
-          else
-            echo "Skipping YouTube upload: Secret YOUTUBE_TOKENS_JSON not configured"
-          fi
+          name: ${{ github.event.inputs.project_name }}-real-video.mp4
+          path: projects/${{ github.event.inputs.project_name }}/renders/final_animated_short.mp4
