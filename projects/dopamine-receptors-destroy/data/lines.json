@@ -1,73 +1,61 @@
 {
- "duration": 35.954,
+ "duration": 37.962,
  "voice": "am_michael",
- "speed": 1.0,
+ "speed": 1.05,
  "lines": [
   {
    "i": 0,
-   "text": "What happens if you swallow your gum?",
+   "text": "What happens if you scroll your phone right after waking up?",
    "start": 0.4,
-   "end": 2.222
+   "end": 3.585
   },
   {
    "i": 1,
-   "text": "Well, it slides down your throat and lands right in your stomach,",
-   "start": 2.502,
-   "end": 5.762
+   "text": "Well, your brain starts the day in a calm alpha-wave state,",
+   "start": 3.865,
+   "end": 7.155
   },
   {
    "i": 2,
-   "text": "where strong acid gets to work on it.",
-   "start": 6.312,
-   "end": 8.465
+   "text": "but each short video hits you with a 200 percent dopamine spike.",
+   "start": 7.715,
+   "end": 12.067
   },
   {
    "i": 3,
-   "text": "The sugar and flavor dissolve pretty quickly, but the gum base is a different story.",
-   "start": 8.745,
-   "end": 13.831
+   "text": "To protect itself from burnout, your brain literally shuts down its dopamine receptors.",
+   "start": 12.347,
+   "end": 17.777
   },
   {
    "i": 4,
-   "text": "It's a rubbery polymer, and your body simply can't break it down.",
-   "start": 14.111,
-   "end": 17.96
+   "text": "This is why everyday tasks like studying or working suddenly feel painful.",
+   "start": 18.057,
+   "end": 22.786
   },
   {
    "i": 5,
-   "text": "So does it stay there for seven years? Nope, that's a total myth.",
-   "start": 18.24,
-   "end": 22.078
+   "text": "So is your motivation broken forever? Nope, that's a myth.",
+   "start": 23.066,
+   "end": 26.729
   },
   {
    "i": 6,
-   "text": "Your gut just keeps pushing it along,",
-   "start": 22.358,
-   "end": 24.268
+   "text": "Your brain can reset those receptors within forty-eight hours.",
+   "start": 27.009,
+   "end": 30.669
   },
   {
    "i": 7,
-   "text": "and within a few days, it's out of your system.",
-   "start": 24.798,
-   "end": 27.096
+   "text": "Just wait thirty minutes before touching your phone tomorrow morning,",
+   "start": 30.949,
+   "end": 34.309
   },
   {
    "i": 8,
-   "text": "But if you swallow a lot of gum all at once,",
-   "start": 27.376,
-   "end": 29.846
-  },
-  {
-   "i": 9,
-   "text": "it can clump together and actually block your gut.",
-   "start": 30.246,
-   "end": 32.938
-  },
-  {
-   "i": 10,
-   "text": "So maybe, just spit it out.",
-   "start": 33.218,
-   "end": 34.774
+   "text": "and watch your natural focus double.",
+   "start": 34.799,
+   "end": 36.782
   }
  ]
 }
