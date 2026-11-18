@@ -1,0 +1,63 @@
+name: Render Viral Short on Cloud
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Short project folder to render'
+        required: true
+        default: 'microplastics-brain'
+      upload_youtube:
+        description: 'Auto upload to YouTube via API token (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  cloud_render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js & Chrome Headless
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install System FFmpeg & Audio Codecs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libasound2 libatk-bridge2.0-0 libgtk-3-0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Rendering Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pillow google-api-python-client google-auth-oauthlib google-auth-httplib2
+
+      - name: Render Full 9:16 Short Video
+        run: |
+          echo "Starting cloud render for: ${{ github.event.inputs.project_name }}"
+          python3 render_engine.py "projects/${{ github.event.inputs.project_name }}"
+
+      - name: Save Rendered Video Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.project_name }}-render.mp4
+          path: projects/${{ github.event.inputs.project_name }}/final_short.mp4
+
+      - name: Upload to YouTube (Optional)
+        if: ${{ github.event.inputs.upload_youtube == 'true' }}
+        env:
+          YOUTUBE_TOKENS_JSON: ${{ secrets.YOUTUBE_TOKENS_JSON }}
+        run: |
+          if [ -n "$YOUTUBE_TOKENS_JSON" ]; then
+            echo "$YOUTUBE_TOKENS_JSON" > youtube_tokens.json
+            python3 upload_to_youtube.py "projects/${{ github.event.inputs.project_name }}"
+          else
+            echo "Skipping YouTube upload: Secret YOUTUBE_TOKENS_JSON not configured"
+          fi

@@ -1,0 +1,60 @@
+{
+  "id": "microplastics-brain",
+  "title": "Scientists Found WHAT Inside Your Brain?! 🤯 #shorts #sciencefacts",
+  "description": "New 2024 autopsy studies revealed that human brains now contain up to 0.5% microplastics by weight! Watch to see how it gets there and how to protect yourself.\n\n#shorts #science #health #brainhealth #facts #didyouknow #biology",
+  "tags": ["microplastics", "brain health", "science facts", "health tips", "daily habits", "did you know"],
+  "category_id": "28",
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "shots": [
+    {
+      "start": 0.0,
+      "end": 3.2,
+      "voice_text": "Scientists just sliced open human brains, and what they found inside is terrifying.",
+      "caption": "HUMAN BRAINS HAVE A *TERRIFYING SECRET*",
+      "color": "#FF3B30",
+      "sfx": "sub_drop.mp3"
+    },
+    {
+      "start": 3.2,
+      "end": 8.0,
+      "voice_text": "New autopsy studies from 2024 revealed that your brain now contains about zero point five percent pure plastic by weight.",
+      "caption": "0.5% OF YOUR BRAIN IS *PLASTIC*!",
+      "color": "#FFE500",
+      "sfx": "warning_klaxon.mp3"
+    },
+    {
+      "start": 8.0,
+      "end": 15.5,
+      "voice_text": "That's equivalent to an entire credit card worth of plastic sitting inside your skull. And the crazy part? You're drinking it every single day.",
+      "caption": "AN ENTIRE *CREDIT CARD* INSIDE YOU!",
+      "color": "#FF3B30",
+      "sfx": "card_snap.mp3"
+    },
+    {
+      "start": 15.5,
+      "end": 23.5,
+      "voice_text": "A single paper tea bag drops eleven billion microplastics into your cup. And microwaving food in plastic boxes unleashes millions more.",
+      "caption": "TEA BAGS RELEASE *11 BILLION* PARTICLES!",
+      "color": "#FFE500",
+      "sfx": "steam_hiss.mp3"
+    },
+    {
+      "start": 23.5,
+      "end": 31.0,
+      "voice_text": "These particles are so tiny they cross the blood-brain barrier, triggering chronic inflammation, brain fog, and early memory decline.",
+      "caption": "CROSSES THE *BLOOD-BRAIN BARRIER*",
+      "color": "#FF3B30",
+      "sfx": "geiger_click.mp3"
+    },
+    {
+      "start": 31.0,
+      "end": 38.0,
+      "voice_text": "Switch to glass or stainless steel bottles, and never heat plastic in the microwave. Because once it gets into your brain, there is no way out.",
+      "caption": "*NEVER HEAT PLASTIC!* NO WAY OUT.",
+      "color": "#00E676",
+      "sfx": "success_bell.mp3"
+    }
+  ]
+}
