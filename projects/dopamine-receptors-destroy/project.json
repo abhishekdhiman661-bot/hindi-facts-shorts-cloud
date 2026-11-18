@@ -1,0 +1,62 @@
+{
+  "id": "dopamine-receptors-destroy",
+  "title": "What Scrolling For 1 Hour Does To Your Brain 🧠 #shorts #psychology",
+  "description": "Every swipe spikes your dopamine by 200%, but what actually happens inside your brain receptors? Here is the neuroscience behind why you feel exhausted, unmotivated, and brain-fogged after scrolling.\n\n#shorts #psychology #neuroscience #brainhealth #focus #dopaminedetox #productivity",
+  "tags": ["dopamine", "brain hack", "screen addiction", "psychology facts", "neuroscience", "why you are tired"],
+  "category_id": "28",
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "theme": "THEME_10_PSYCHOLOGY_NEUROSCIENCE",
+  "hook_archetype": "THE_DANGEROUS_DAILY_HABIT",
+  "shots": [
+    {
+      "start": 0.0,
+      "end": 3.5,
+      "voice_text": "If you just woke up and scrolled your phone in bed, you silently destroyed your brain's focus for the next 12 hours.",
+      "caption": "*SCROLLING IN BED* DESTROYS YOUR BRAIN!",
+      "color": "#FF3B30",
+      "sfx": "sub_impact.mp3"
+    },
+    {
+      "start": 3.5,
+      "end": 8.0,
+      "voice_text": "When you wake up, your brain is in a fragile alpha wave state. But each 10-second video blasts a 200% unnatural dopamine spike.",
+      "caption": "+200% *UNNATURAL DOPAMINE SPIKE*!",
+      "color": "#FFE500",
+      "sfx": "glitch_impact.mp3"
+    },
+    {
+      "start": 8.0,
+      "end": 15.0,
+      "voice_text": "To protect itself from neurotoxic overload, your brain literally downgrades and burns off your D2 dopamine receptors.",
+      "caption": "YOUR BRAIN *BURNS OFF RECEPTORS*!",
+      "color": "#FF3B30",
+      "sfx": "harsh_thud.mp3"
+    },
+    {
+      "start": 15.0,
+      "end": 22.5,
+      "voice_text": "This is why normal tasks like studying, working, or reading feel physically painful. Your brain simply cannot feel joy without an extreme hyper-stimulus.",
+      "caption": "WHY STUDYING & WORK FEELS *PAINFUL*!",
+      "color": "#FFE500",
+      "sfx": "record_scratch.mp3"
+    },
+    {
+      "start": 22.5,
+      "end": 30.0,
+      "voice_text": "Even worse: your prefrontal cortex, the part responsible for discipline and willpower, gets starved of blood flow, leaving you stuck in paralysis.",
+      "caption": "DISCIPLINE CENTER *SHUTS DOWN*",
+      "color": "#FF3B30",
+      "sfx": "heartbeat_thump.mp3"
+    },
+    {
+      "start": 30.0,
+      "end": 38.0,
+      "voice_text": "Tomorrow morning, wait just 30 minutes before touching any screen. Get sunlight in your eyes instead, and watch your natural energy double.",
+      "caption": "*WAIT 30 MINUTES.* DOUBLE YOUR ENERGY!",
+      "color": "#00E676",
+      "sfx": "bright_success_bell.mp3"
+    }
+  ]
+}
