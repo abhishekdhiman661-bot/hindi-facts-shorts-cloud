@@ -24,9 +24,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Verify FFmpeg
-        run: |
-          ffmpeg -version
+      - name: Setup FFmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        with:
+          ffmpeg-version: release
 
       - name: Setup Python
         uses: actions/setup-python@v5
