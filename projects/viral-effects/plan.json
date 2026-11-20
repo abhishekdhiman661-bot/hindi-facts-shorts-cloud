@@ -1,0 +1,68 @@
+{
+  "effects": [
+    {
+      "fx": "lean-in",
+      "start": 0.5,
+      "end": 3.2,
+      "zoom": 1.25
+    },
+    {
+      "fx": "backdrop-word",
+      "start": 3.5,
+      "end": 6.8,
+      "text": "10 IDEAS?",
+      "color": "FFE500"
+    },
+    {
+      "fx": "todo",
+      "start": 10.5,
+      "end": 14.5,
+      "title": "AD TESTING",
+      "text": "Comfort|New Model|New BG",
+      "ticks": "11.2|12.6|14.0"
+    },
+    {
+      "fx": "tape-label",
+      "start": 18.0,
+      "end": 21.0,
+      "text": "SURFACE VARIATION"
+    },
+    {
+      "fx": "reject-stamp",
+      "start": 27.5,
+      "end": 32.0,
+      "text": "NOT NEW ANGLE",
+      "color": "FF3B30",
+      "angle": -12
+    },
+    {
+      "fx": "liquid-glass-graph",
+      "start": 35.0,
+      "end": 40.5,
+      "text": "ANGLE TESTING ROAS",
+      "from": "1.2X",
+      "to": "5.4X",
+      "color": "00E676"
+    },
+    {
+      "fx": "apple-toggles",
+      "start": 42.0,
+      "end": 48.0,
+      "text": "Comfort Angle|Unique Design|Durability & Price",
+      "ticks": "43.0|45.0|47.0"
+    },
+    {
+      "fx": "messages",
+      "start": 50.0,
+      "end": 54.5,
+      "text": "Stop basic variations!|Test new angles to scale!"
+    },
+    {
+      "fx": "spotlight",
+      "start": 58.0,
+      "end": 64.5,
+      "text": "SCALE 10X",
+      "color": "FFE500"
+    }
+  ]
+}
