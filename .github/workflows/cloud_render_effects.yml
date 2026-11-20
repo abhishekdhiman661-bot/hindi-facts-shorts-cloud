@@ -25,7 +25,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-dejavu fonts-freefont-ttf
+          sudo apt-get install -y ffmpeg fonts-dejavu fonts-freefont-ttf libegl1 libgl1 libglib2.0-0 libsm6 libxext6 libxrender-dev
 
       - name: Install Python Dependencies
         run: |
