@@ -1,0 +1,43 @@
+name: Render Puffco x BenDaDonnn Short on Cloud
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'projects/puffco-bendadonnn/**'
+      - '.github/workflows/cloud_render_puffco.yml'
+
+jobs:
+  render_puffco:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu fonts-freefont-ttf
+
+      - name: Install yt-dlp
+        run: |
+          pip install --upgrade pip
+          pip install yt-dlp
+
+      - name: Run Cloud Render Pipeline
+        run: |
+          python projects/puffco-bendadonnn/render_puffco_short.py
+
+      - name: Upload Final Render Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: puffco_bendadonnn_short
+          path: projects/puffco-bendadonnn/final_puffco_short.mp4
